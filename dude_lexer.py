@@ -9,10 +9,12 @@ class InvalidSymbolError(BaseException):
 
 def tokenize(program: str) -> [str]:
     ids = [NEWLINE, SPACE,
+           LT_QM, LT_AP,
            CT_COL, CT_PAR_OP, CT_PAR_CL, CT_BRA_OP, CT_BRA_CL,
-           OP_EQ, OP_PLUS, OP_MINUS, OP_MUL, OP_DIV, OP_LT, OP_GT, OP_AND, OP_OR, OP_XOR, OP_COMP, OP_NOT] = range(19)
+           OP_EQ, OP_PLUS, OP_MINUS, OP_MUL, OP_DIV, OP_LT, OP_GT, OP_AND, OP_OR, OP_XOR, OP_COMP, OP_NOT] = range(21)
 
     syms = ['\n', ' ',
+            '"', '\'',
             ',', '(', ')', '[', ']',
             '=', '+', '-', '*', '/', '<', '>', '&', '|', '^', '~', '!']
 
